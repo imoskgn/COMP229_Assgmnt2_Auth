@@ -1,0 +1,39 @@
+{
+  "name": "comp229_portafolio_ogn",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "engines": {
+    "node": "^12.18.3",
+    "npm": "^6.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@popperjs/core": "^2.10.2",
+    "bootstrap": "^5.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jquery": "^3.6.0",
+    "mongoose": "^6.0.11",
+    "morgan": "~1.9.1",
+    "popper.js": "^1.16.1"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imoskgn/COMP229_Assgmnt1_Portfolio.git"
+  },
+  "author": "Oscar Gonzalez - 301185878",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imoskgn/COMP229_Assgmnt1_Portfolio/issues"
+  },
+  "homepage": "https://github.com/imoskgn/COMP229_Assgmnt1_Portfolio#readme",
+  "description": ""
+}
