@@ -1,0 +1,39 @@
+<!-- Including header and main navigation panel partials -->
+<%- include('partials/header.ejs') %> <%- include('partials/main_nav.ejs')%>
+
+<!-- Main content -->
+<main class="container">
+    <div class="offset-md-1 col-md-8">
+        <h1><%= title %></h1>
+        <br>
+        <table class="table table-bordered table-striped table-hover ">
+            <!-- Header row -->
+            <thead>
+                <tr>
+                  <th scope="col" class="text-center">#</th>
+                  <th scope="col" class="text-center">Name</th>
+                  <th scope="col" class="text-center">Phone Number</th>
+                  <th scope="col" class="text-center">Email Address</th>
+                  <th scope="col" class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Repeatable row -->
+                <% for(let count = 0; count <ContactList.length;count++) {%>
+                    <tr>
+                        <td class="text-center"><%= count+1 %></td>
+                        <td class="text-center"><%= ContactList[count].name %></td>
+                        <td class="text-center"><%= ContactList[count].phone %></td>
+                        <td class="text-center"><%= ContactList[count].email %></td>
+                        <div class="text-center">
+                            <td class="btn btn-primary text-center" role="button">123</td>
+                            <td class="btn btn-primary text-center" role="button">456</td>
+                        </div>
+                    </tr>
+                <% } %>  
+            </tbody>
+        </table>
+    </div>
+</main>
+<!-- Including footer and bottom panel partials -->
+<%- include('partials/bottom_nav.ejs')%> <%- include('partials/footer.ejs') %>
