@@ -21,10 +21,7 @@ router.get("/", (req, res, next) => {
 
 // GET      --> to display Add / CREATE
 router.get("/add", (req, res, next) => {
-  res.render("contact/list", {
-    title: "Add contact",
-    ContactList: contactList,
-  });
+  res.render("contact/add", {title: "Add contact"});
 });
 
 // POST     --> to process Add / CREATE
@@ -35,6 +32,7 @@ router.post("/add", (req, res, next) => {
     email: req.body.email,
     address: req.body.description,
   });
+
   Contact.create(newContact, (err, Contact) => {
     if (err) {
       console.log(err);
@@ -76,7 +74,7 @@ router.post("/edit/:id", (req, res, next) => {
       console.log(err);
       res.end(err);
     } else {
-      res.redirect("contact/contact-list");
+      res.redirect("/contact-list");
     }
   });
 });
@@ -89,7 +87,7 @@ router.get("/delete/:id", (req, res, next) => {
       console.log(err);
       res.end(err);
     } else {
-      res.redirect("contact/contact-list");
+      res.redirect("/contact-list");
     }
   });
 });
