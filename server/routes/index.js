@@ -1,33 +1,22 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+
+let indexControllers = require('../controllers/index')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home', h1:'Main Heading' });
-});
-
-router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'Home', h1:'Main Heading' });
-});
+router.get('/', indexControllers.displayHomePage);
+router.get('/home', indexControllers.displayHomePage);
 
 /* GET About. */
-router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About', h1:'Main Heading' });
-});
+router.get('/about', indexControllers.displayAboutPage);
 
 /* GET Products */
-router.get('/projects', function(req, res, next) {
-  res.render('index', { title: 'Projects', h1:'Main Heading' });
-});
+router.get('/projects', indexControllers.displayProjectsPage);
 
 /* GET Services */
-router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Services', h1:'Main Heading' });
-});
+router.get('/services', indexControllers.displayServicesPage);
 
 /* GET Contact Us */
-router.get('/contact', function(req, res, next) {
-  res.render('index', { title: 'Contact Me', h1:'Main Heading' });
-});
+router.get('/contact', indexControllers.displayContactPage);
 
 module.exports = router;
