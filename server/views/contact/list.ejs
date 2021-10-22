@@ -1,10 +1,12 @@
 <!-- Including header and main navigation panel partials -->
-<%- include('partials/header.ejs') %> <%- include('partials/main_nav.ejs')%>
+<%- include('../partials/header.ejs') %> <%- include('../partials/main_nav.ejs')%>
 
 <!-- Main content -->
 <main class="container">
     <div class="offset-md-1 col-md-8">
         <h1><%= title %></h1>
+        <a href="/contact-list/add" class="btn btn-primary" role="button">
+            <i class="fas fa-plus-circle"></i> Add Contact</a>
         <br>
         <table class="table table-bordered table-striped table-hover ">
             <!-- Header row -->
@@ -25,10 +27,14 @@
                         <td class="text-center"><%= ContactList[count].name %></td>
                         <td class="text-center"><%= ContactList[count].phone %></td>
                         <td class="text-center"><%= ContactList[count].email %></td>
-                        <div class="text-center">
-                            <td class="btn btn-primary text-center" role="button">123</td>
-                            <td class="btn btn-primary text-center" role="button">456</td>
-                        </div>
+                        <td class="text-center col-1">
+                            <a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i> Edit</a>
+                        </td>
+                        <td class="text-center col-1">
+                            <a href="/contact-list/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i> Delete</a>
+                        </td>
                     </tr>
                 <% } %>  
             </tbody>
@@ -36,4 +42,4 @@
     </div>
 </main>
 <!-- Including footer and bottom panel partials -->
-<%- include('partials/bottom_nav.ejs')%> <%- include('partials/footer.ejs') %>
+<%- include('../partials/bottom_nav.ejs')%> <%- include('../partials/footer.ejs') %>
