@@ -4,7 +4,8 @@ let mongoose = require("mongoose");
 let contactModel = mongoose.Schema({
     name: String,
     phone:String,
-    email:String
+    email:String,
+    address:String
 },
 {
     collection:'contact'
