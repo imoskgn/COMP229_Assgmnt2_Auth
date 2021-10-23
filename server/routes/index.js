@@ -19,4 +19,19 @@ router.get('/services', indexControllers.displayServicesPage);
 /* GET Contact Us */
 router.get('/contact', indexControllers.displayContactPage);
 
+// GET      --> to display Login page
+router.get("/login", indexControllers.displayLoginPage);
+
+// POST     --> to process Login page
+router.post("/login", indexControllers.processLoginPage);
+
+// GET      --> to display Login page
+router.get("/register", indexControllers.displayRegisterPage);
+
+// POST     --> to process Add / CREATE
+router.post("/register", indexControllers.processRegisterPage);
+
+// POST     --> to process Add / CREATE
+router.get("/logout", indexControllers.processLogout);
+
 module.exports = router;

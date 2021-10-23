@@ -40,13 +40,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imoskgn/COMP229_Assgmnt1_Portfolio.git"
+    "url": "git+https://github.com/imoskgn/COMP229_Assgmnt2_Auth.git"
   },
   "author": "Oscar Gonzalez - 301185878",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/imoskgn/COMP229_Assgmnt1_Portfolio/issues"
+    "url": "https://github.com/imoskgn/COMP229_Assgmnt2_Auth/issues"
   },
-  "homepage": "https://github.com/imoskgn/COMP229_Assgmnt1_Portfolio#readme",
+  "homepage": "https://github.com/imoskgn/COMP229_Assgmnt2_Auth#readme",
   "description": ""
 }

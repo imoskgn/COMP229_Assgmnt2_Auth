@@ -12,14 +12,15 @@ module.exports.displayContactList = (req, res, next) => {
     } else {
       res.render("contact/list", {
         title: "ContactList",
-        ContactList: contactList,
+        ContactList: contactList, 
+        displayName:req.user ? req.user.displayName : ''
       });
     }
   });
 };
 
 module.exports.displayContactAdd = (req, res, next) => {
-  res.render("contact/add", { title: "Add contact" });
+  res.render("contact/add", { title: "Add contact", displayName:req.user ? req.user.displayName : ''});
 };
 
 module.exports.processContactAdd = (req, res, next) => {
@@ -49,7 +50,7 @@ module.exports.displayContactUpdate = (req, res, next) => {
       console.log(err);
       res.end(err);
     } else {
-      res.render("contact/edit", { title: "Edit Contact", contactToEdit });
+      res.render("contact/edit", { title: "Edit Contact", contactToEdit, displayName:req.user ? req.user.displayName : ''});
     }
   });
 };
