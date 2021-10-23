@@ -32,18 +32,20 @@
                         <a class="nav-link" aria-current="page" href="/services"><i class="fas fa-cogs"></i> Services</a>
                     <% } %>
                 </li>
+                <% if(typeof displayName == 'string' && displayName) { %> 
+                    <li class="nav-item">
+                        <% if (title=="Business Contact List" ) { %>
+                            <a class="nav-link active" aria-current="page" href="/contact-list"><i class="far fa-address-book fa-lg"></i> Business Contact List</a>
+                        <% }else{ %>
+                            <a class="nav-link" aria-current="page" href="/contact-list"><i class="far fa-address-book"></i> Business Contact List</a>
+                        <% } %>
+                    </li>
+                <% }%> 
                 <li class="nav-item">
                     <% if (title=="About" ) { %>
                         <a class="nav-link active" aria-current="page" href="/about"><i class="fas fa-info-circle fa-lg"></i> About</a>
                     <% }else{ %>
                         <a class="nav-link" aria-current="page" href="/about"><i class="fas fa-info-circle"></i> About</a>
-                    <% } %>
-                </li>
-                <li class="nav-item">
-                    <% if (title=="Business Contact List" ) { %>
-                        <a class="nav-link active" aria-current="page" href="/contact-list"><i class="far fa-address-book fa-lg"></i> Business Contact List</a>
-                    <% }else{ %>
-                        <a class="nav-link" aria-current="page" href="/contact-list"><i class="far fa-address-book"></i> Business Contact List</a>
                     <% } %>
                 </li>
                 <li class="nav-item">
@@ -59,7 +61,7 @@
                         <i class="fas fa-sm fa-sign-out-alt"></i> Logout</a></li>
                 <% } else { %> 
                     <li class="nav-item"><a href="/login" class="nav-link">
-                        <i class="fas fa-sm fa-sing-in-alt"></i> Login</a></li>
+                        <i class="fas fa-sm fa-sign-in-alt"></i> Login</a></li>
                 <% } %> 
             </ul>
         </div>

@@ -2,16 +2,16 @@ let express = require("express");
 let router = express.Router();
 let mongoose = require("mongoose");
 
-// Connect to our model (TODO)
+// Connect to our model
 let Contact = require("../models/contact_list");
 
 module.exports.displayContactList = (req, res, next) => {
-  Contact.find((err, contactList) => {
+  Contact.find({}).sort('name').exec((err, contactList) => {
     if (err) {
       return console.error(err);
     } else {
       res.render("contact/list", {
-        title: "ContactList",
+        title: "Business Contact List",
         ContactList: contactList, 
         displayName:req.user ? req.user.displayName : ''
       });
